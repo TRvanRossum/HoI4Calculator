@@ -87,7 +87,7 @@ public class EquipmentBuilder {
 			case 2:
 				return new Equipment("Advanced Anti-Air", 0, 4, 15, 32, 4, 1, 0, 88, 0, 0, 0.8, 6, 3, 0, 0, 0, 0);
 			default:
-				throw new InvalidLevelException("Invalid level: anti-tank can only have levels from 0 to 2.");
+				throw new InvalidLevelException("Invalid level: anti-air can only have levels from 0 to 2.");
 		}
 	}
 	
