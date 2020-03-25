@@ -51,6 +51,47 @@ public class EquipmentBuilder {
 				return new Equipment("Advanced Artillery", 0, 34, 2, 0, 18, 8, 0, 5, 0, 0, 0.8, 4.5, 3, 1, 0, 0, 0);
 			default:
 				throw new InvalidLevelException("Invalid level: artillery can only have levels from 0 to 2.");
+		}
 	}
+	
+	public static Equipment getRocketArtilleryEquipment(int level) throws InvalidLevelException {
+		switch(level) {
+			case 0:
+				return new Equipment("Rocket Artillery", 0, 30, 1, 0, 12, 9, 0, 2, 0, 0, 0.8, 4, 1, 2, 0, 0, 0);
+			case 1:
+				return new Equipment("Advanced Rocket Artillery", 0, 38, 1, 0, 15, 12, 0, 2, 0, 0, 0.8, 5, 1, 2, 0, 0, 0);
+			default:
+				throw new InvalidLevelException("Invalid level: rocket artillery can only have levels from 0 to 1.");
+		}
+	}
+	
+	public static Equipment getAntiTankEquipment(int level) throws InvalidLevelException {
+		switch(level) {
+			case 0:
+				return new Equipment("Anti-Tank", 0, 4, 15, 0, 4, 0, 0, 75, 0, 0, 0.8, 4, 2, 2, 0, 0, 0);
+			case 1:
+				return new Equipment("Improved Anti-Tank", 0, 4, 22, 0, 4, 0, 0, 88, 0, 0, 0.8, 5, 2, 2, 0, 0, 0);
+			case 2:
+				return new Equipment("Advanced Anti-Tank", 0, 4, 30, 0, 4, 0, 0, 108, 0, 0, 0.8, 4.5, 6, 3, 2, 0, 0);
+			default:
+				throw new InvalidLevelException("Invalid level: anti-tank can only have levels from 0 to 2.");
+		}
+	}
+	
+	public static Equipment getAntiAirEquipment(int level) throws InvalidLevelException {
+		switch(level) {
+			case 0:
+				return new Equipment("Anti-Air", 0, 3, 7, 19, 4, 1, 0, 25, 0, 0, 0.8, 4, 2, 0, 0, 0, 0);
+			case 1:
+				return new Equipment("Improved Anti-Air", 0, 3.5, 11, 25, 4, 1, 0, 60, 0, 0, 0.8, 5, 2, 0, 0, 0, 0);
+			case 2:
+				return new Equipment("Advanced Anti-Air", 0, 4, 15, 32, 4, 1, 0, 88, 0, 0, 0.8, 6, 3, 0, 0, 0, 0);
+			default:
+				throw new InvalidLevelException("Invalid level: anti-tank can only have levels from 0 to 2.");
+		}
+	}
+	
+	public static Equipment getSupportEquipment() {
+		return new Equipment("Support Equipment", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.8, 4, 2, 0, 0, 1, 0);
 	}
 }
